@@ -11,13 +11,6 @@ const NavBar = () => {
         setNav(!nav)
     }
 
-    let Links = [
-        { name: 'Home', link: '/' },
-        { name: 'About Us', link: '/' },
-        { name: 'Services', link: '/' },
-        { name: 'Contact Us', link: '/' },
-    ]
-
 
 
 
@@ -35,11 +28,16 @@ const NavBar = () => {
 
 <ul className='hidden md:flex gap-12'>
 
-{Links.map(link => <li><a className='font-medium text-lg' href={link.link}>{link.name}</a></li>)}
+<li><a href='#' className='font-medium text-lg hover:text-[#51b174] transition ease-in-out delay-150'>Home 
+
+</a></li>
+<li><a href='#' className='font-medium text-lg hover:text-[#51b174] transition ease-in-out delay-150'>About Us</a></li>
+<li><a href='#' className='font-medium text-lg hover:text-[#51b174] transition ease-in-out delay-150'>Services</a></li>
+<li><a href='#' className='font-medium text-lg hover:text-[#51b174] transition ease-in-out delay-150'>Contact US</a></li>
 
 </ul>
 
-<button className='hidden md:flex gap-2 items-center border border-gray-200 px-8 py-2 rounded-lg hover:border-gray-300 text-lg font-medium'>
+<button className='hidden md:flex gap-2 items-center border border-gray-200 px-8 py-2 rounded-lg hover:border-gray-300 text-lg font-medium md:hover:text-white md:hover:bg-[#51b174] transition ease-in-out delay-150 md:hover:scale-95'>
 Get Quote
 
 <FontAwesomeIcon icon={faArrowRight} />
@@ -59,9 +57,12 @@ Get Quote
 <ul className={`${nav ? ' opacity-100 transform translate-x-0' : 'opacity-0 transform -translate-y-full'}
 transition-transform absolute top-0 left-0 w-full h-screen bg-zinc-800/80 flex flex-col justify-center items-center text-lg text-white gap-9 `}>
 
-{Links.map(link => <li><a className='font-medium text-lg' href={link.link}>{link.name}</a></li>)}
+<li><a href='#' className='font-medium text-lg'>Home</a></li>
+<li><a href='#' className='font-medium text-lg'>About Us</a></li>
+<li><a href='#' className='font-medium text-lg'>Services</a></li>
+<li><a href='#' className='font-medium text-lg'>Contact US</a></li>
 
-<button className='flex gap-2 items-center border border-gray-200 px-8 py-2 rounded-lg hover:border-gray-300 text-lg font-medium'>
+<button className='flex gap-2 items-center border border-gray-200 px-8 py-2 rounded-lg hover:border-transparent text-lg font-medium hover:bg-[#51b174] transition ease-in-out delay-150 hover:scale-95'>
 
     Get Quote
 
